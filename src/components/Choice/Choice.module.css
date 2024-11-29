@@ -1,0 +1,16 @@
+.panel{
+    transition: background-color 0.2s ease, color 0.2s ease-in;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #20211A;
+    border-radius: 5px;
+}
+.panel:hover{
+    background-color: #20211A;
+    color:#FFFF;
+}
+
+.clicked { 
+    background-color: #20211A;
+    color:#FFFF;
+}

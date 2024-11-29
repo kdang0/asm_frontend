@@ -1,0 +1,10 @@
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn--save{
+    padding:1rem;
+    font-size: 1rem;
+}

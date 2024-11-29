@@ -1,0 +1,25 @@
+.problems{
+    display:flex;
+    gap: 2rem;
+}
+
+.submission__top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.submission{
+    width: 100%;
+    padding:2rem;
+    padding-top: 1rem;
+}
+
+
+.problems__list{
+    list-style-position: inside;
+}
+
+.submission__questionText{
+
+}
+

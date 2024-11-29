@@ -1,0 +1,21 @@
+.container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw;
+    border: 1px solid #20211A;
+    padding:1rem;
+    box-shadow: 5px 5px #20211A;
+    border-radius: 5px;
+    transition: box-shadow 0.1s ease-out, transform 0.2s ease-in-out;
+}
+.container:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px #20211A;
+}
+
+
+.cardLink{
+    text-decoration: none;
+    color:#20211A;
+}
