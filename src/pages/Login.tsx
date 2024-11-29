@@ -33,7 +33,7 @@ export const Login = () => {
       const user : User = data.user as User;
       login(user);
     } else {
-      alert(data);
+      alert("HUH");
     }
   };
 
