@@ -107,7 +107,7 @@ export const loginAPI = async (
   const res = await axios.post(`${url}/login`, {
     username: userName,
     password: password,
-  }
+  }, {withCredentials: true}
 );
   const data = res.data;
   return data;

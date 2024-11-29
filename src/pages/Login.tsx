@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+
 import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { User , Quote } from "../types";
 import { loginAPI, getQuote } from "../services/dac-api";
 
-axios.defaults.withCredentials = true;
 
 export const Login = () => {
   const [username, setUsername] = useState("");
