@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useAuth } from "../hooks/useAuth";
 import { StudentCard } from "../components/StudentCard/StudentCard";
 import { Student } from "../types";
 import { getStudents } from "../services/dac-api";
-axios.defaults.withCredentials = true;
+
 
 export const StudentList = () => {
   const [students, setStudents] = useState<Student[]>([]);
