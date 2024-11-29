@@ -29,6 +29,7 @@ export const Login = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     const data = await loginAPI(username,password);
+    console.log(data);
     if (data.user) {
       const user : User = data.user as User;
       login(user);
