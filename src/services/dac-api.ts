@@ -1,4 +1,4 @@
-import { Submission, Assignment, Quote, Student, Class } from "../types";
+import { Submission, Assignment, Quote, Student, Class, User } from "../types";
 import axios from "axios";
 
 const url = import.meta.env.VITE_URL;
@@ -122,4 +122,12 @@ export const getQuote = async (): Promise<Quote> => {
 export const submitAssignment = async (submission: Record<string,unknown>) : Promise<number> => {
     const res = await axios.patch(`${url}/assignment/submit`, submission);
     return res.status;
+}
+
+
+export const getProfile = async () : Promise<User> => {
+    const res = await axios.get(`${url}/profile`);
+    const data = res.data;
+    const user : User = data.user
+    return user;
 }

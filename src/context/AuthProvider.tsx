@@ -2,6 +2,7 @@ import { ReactNode, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
 import axios from "axios";
+import { getProfile } from "../services/dac-api";
 
 
 
@@ -25,10 +26,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | undefined | null>(undefined);
   useEffect(() => {
     async function fetchUser(){
-        const res = await axios.get('http://localhost:4000/profile');
-        const data = res.data;
-        const userData = data.user;
-        console.log(userData);
+        const userData = await getProfile();
         if(userData) {
             setUser(userData);
         } else{
