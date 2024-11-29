@@ -1,6 +1,6 @@
 import { Submission, Assignment, Quote, Student, Class, User } from "../types";
 import axios from "axios";
-
+axios.defaults.withCredentials = true
 const url = import.meta.env.VITE_URL;
 
 export const getAssignment = async (id: string): Promise<Assignment> => {
@@ -107,7 +107,8 @@ export const loginAPI = async (
   const res = await axios.post(`${url}/login`, {
     username: userName,
     password: password,
-  });
+  }
+);
   const data = res.data;
   return data;
 };
