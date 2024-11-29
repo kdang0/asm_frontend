@@ -29,7 +29,7 @@ export const Login = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     const data = await loginAPI(username,password);
-    if (data.user && typeof data.user === 'object') {
+    if (data.user) {
       const user : User = data.user as User;
       login(user);
     } else {
